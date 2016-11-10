@@ -1,6 +1,10 @@
-$(document).on('turbo:links', function(){
+$(document).on('turbolinks:load', function(){
 
-
+$('#start_button').on('click', function(e){
+  e.preventDefault();
+  $('#game_list')
+  console.log('test');
+})
 
 
 
