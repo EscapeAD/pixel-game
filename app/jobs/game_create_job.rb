@@ -3,9 +3,6 @@ class GameCreateJob < ApplicationJob
 
   def perform(button)
     # Do something later
-    puts "^^^^^^^^^^^^^^^^^^^^^^"
-    puts button
-    puts "^^^^^^^^^^^^^^^^^^^^^^"
     ActionCable.server.broadcast "global", {
       name: button.name
     }

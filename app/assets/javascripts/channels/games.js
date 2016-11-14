@@ -6,8 +6,6 @@ App.games = App.cable.subscriptions.create({
      },
 
     received: function(data){
-    // $('#game_list').append(data.message);
-    console.log('test');
-    // $('#game_list').append('<button>')
+    $('#game_list').append('<button>')
   }
 });
