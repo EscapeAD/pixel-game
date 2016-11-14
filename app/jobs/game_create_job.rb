@@ -1,11 +1,13 @@
 class GameCreateJob < ApplicationJob
   queue_as :default
 
-  def perform(output)
+  def perform(button)
+    puts button
+    puts button.name
     # Do something later
     ActionCable.server.broadcast "GamesChannel", {
-      # GameController.renderer.render(partial: 'games/games', locals: { game: output })
-      button: output.name
+      name: button.name,
+      button: 1
     }
   end
 end
