@@ -7,9 +7,8 @@ class GamesController < ApplicationController
     button = {
       name: params[:name]
     }
-    ActionCable.server.broadcast 'global', {}
 
-    # GameCreateJob.perform_later(button)
+    GameCreateJob.perform_later(button)
   end
 
 end

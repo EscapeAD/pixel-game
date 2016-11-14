@@ -3,8 +3,6 @@ class GameCreateJob < ApplicationJob
 
   def perform(button)
     # Do something later
-    ActionCable.server.broadcast "global", {
-      name: button.name
-    }
+    ActionCable.server.broadcast "global", {}
   end
 end
