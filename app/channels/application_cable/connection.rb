@@ -4,6 +4,7 @@ module ApplicationCable
 
     def connect
       self.uuid = SecureRandom.uuid
+      logger.add_tags "ActionCable", "User #{self.uuid}"
     end
 
   end
