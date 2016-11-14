@@ -4,6 +4,9 @@ class GamesController < ApplicationController
   end
 
   def create
-    ActionCable.server.broadcast 'GamesChannel'
+    # ActionCable.server.broadcast 'GamesChannel'
+    GameCreateJob.perform_later(button)
+
   end
+
 end
