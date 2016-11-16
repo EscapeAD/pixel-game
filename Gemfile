@@ -10,8 +10,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'redis'
 gem 'rack-cors'
-gem 'rails-api'
-# future gem ----
+# gem 'rails-api'
+# future gem ----r
 # gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
