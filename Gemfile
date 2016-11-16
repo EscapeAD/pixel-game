@@ -10,6 +10,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'redis'
 gem 'rack-cors'
+gem 'rack-attack'
+
 # gem 'rails-api'
 # future gem ----r
 gem 'active_model_serializers', '~> 0.10.0'
