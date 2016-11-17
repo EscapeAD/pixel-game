@@ -8,6 +8,16 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Ionic Css Links -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4e8ef7">
+    <link href="../../../public/ion-pixel/www/build/main.css" rel="stylesheet">
+  
   </head>
   <body>
     <div class='container'>
@@ -21,6 +31,17 @@
     <%= link_to 'Sign in', new_user_session_path %> || <%= link_to 'Sign Up', new_user_registration_path %>
     <% end %>
     <%= yield %>
+
+    <!-- Ionic's root component and where the app will load -->
+    <ion-app></ion-app>
+
+    <!-- The polyfills js is generated during the build process -->
+    <script src="../../../public/ion-pixel/www/build/polyfills.js"></script>
+
+    <!-- The bundle js is generated during the build process -->
+    <script src="../../../public/ion-pixel/www/build/main.js"></script>
+
+
     </div>
   </body>
 </html>

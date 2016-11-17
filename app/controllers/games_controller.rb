@@ -1,6 +1,12 @@
 class GamesController < ApplicationController
   before_action :set_game, only: [:show, :update, :destroy]
 
+  def test
+    #Object and RoomName will be from params later.
+    GameCreateJob.push( "donsroom", {} )
+    render json: { success: true }
+  end
+
   def index
     @games = Game.all
 
