@@ -18,14 +18,16 @@ export class HomePage {
   constructor(public navCtrl: NavController, public gameService: GameService,private ng2cable: Ng2Cable,
               private broadcaster: Broadcaster) {
     this.loadGame();
-    this.ng2cable.subscribe('http://localhost:3000/cable', 'GamesChannel', );
+    this.ng2cable.subscribe('http://localhost:3000/cable', 'GamesChannel');
         //By default event name is 'channel name'. But you can pass from backend field { action: 'MyEventName'}
 
-        this.broadcaster.on<string>('global').subscribe(
-          () => {
-            console.log('HELLLO');
-          }
-        );
+        this.broadcaster.on<string>({action: 'test'}).subscribe(
+          game => {
+          console.log(game);
+          console.log('This is a test to do this');
+        }
+
+      );
   }
   loadGame() {
   this.gameService.load()
