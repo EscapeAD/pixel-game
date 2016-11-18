@@ -23,10 +23,10 @@ export class GameService {
     }
     // Dont have the data yet
     return new Promise(resolve => {
-      this.http.get('https://randomuser.me/api/?results=10')
+      this.http.get('http://localhost:3000/games')
         .map(res => res.json())
         .subscribe(data => {
-          this.data = data.results;
+          this.data = data;
           resolve(this.data);
         });
     });
