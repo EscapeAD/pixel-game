@@ -10,9 +10,26 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class GameService {
+  data: any;
 
   constructor(public http: Http) {
     console.log('Hello GameService Provider');
+
+  }
+
+  load() {
+    if (this.data) {
+      return Promise.resolve(this.data);
+    }
+    // Dont have the data yet
+    return new Promise(resolve => {
+      this.http.get('https://randomuser.me/api/?results=10')
+        .map(res => res.json())
+        .subscribe(data => {
+          this.data = data.results;
+          resolve(this.data);
+        });
+    });
   }
 
 }
