@@ -58,6 +58,7 @@ Rails.application.configure do
   #dota
   Rails.application.configure do
   config.action_cable.url = "ws://localhost:3000/cable"
+  config.action_cable.allowed_request_origins = ['http://localhost:8100']
   end
 
 end
