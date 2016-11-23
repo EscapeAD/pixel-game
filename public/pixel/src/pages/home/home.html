@@ -3,8 +3,9 @@
     <ion-title>
       Pixel Game - Battle of pixels
     </ion-title>
-    <input type='text'>
-    <button (click)='createGame()'> Create Game </button>
+    <input type='text'
+            #gameName>
+    <button (click)='createGame(gameName.val)'> Create Game </button>
   </ion-navbar>
 </ion-header>
 
