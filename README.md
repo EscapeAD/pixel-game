@@ -1,7 +1,10 @@
 # PIXEL
 
-Action Cable, IONIC
+Action Cable, IONIC 2
 - Rails API mode
+
+
+serving ionic 2 out of public
 
 ## Authors
 
