@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Pixel Game - Battle of pixels
+    </ion-title>
+    <input type='text'
+            #gameName>
+    <button (click)='createGame(gameName.val)'> Create Game </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <ion-list>
+    <ion-item *ngFor="let game of games">
+      <h2>{{game.name}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
