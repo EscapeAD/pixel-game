@@ -13,4 +13,7 @@ serving ionic 2 out of public
 
 ## Status
 
+* 0.3 Connected 
+* 0.2 Ironic 2 implement
+* 0.1 Api only rails
 * 0.0 initialization
